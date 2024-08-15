@@ -4,9 +4,4 @@ use App\Http\Controllers\WeatherController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::match(['get','post'],'weather',[WeatherController::class, 'index']);
+Route::match(['get','post'],'/',[WeatherController::class, 'index'])->name('home');
